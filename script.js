@@ -20,7 +20,7 @@ const verifyOtpButton = document.getElementById("verifyOtpButton");
 const adminLoginMessage = document.getElementById("adminLoginMessage");
 const adminLogoutButton = document.getElementById("adminLogoutButton");
 const STORAGE_KEY = "ggvp-student-submissions";
-const OTP_API_BASE = "http://localhost:5000";
+const OTP_API_BASE = "https://shri-godadba-gramin-vikas-pratisthan.onrender.com";
 let currentLanguage = "en";
 
 if (navToggle && navLinks) {
