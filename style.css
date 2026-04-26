@@ -216,8 +216,9 @@ ul {
   font-weight: 500;
 }
 
-.nav-links a {
-  position: relative;
+.nav-links {
+  overflow: visible;
+  /* add this */
 }
 
 .nav-links a::after {
@@ -281,13 +282,11 @@ ul {
   inset: 0;
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent 32%),
-    repeating-linear-gradient(
-      90deg,
+    repeating-linear-gradient(90deg,
       rgba(255, 255, 255, 0.04) 0,
       rgba(255, 255, 255, 0.04) 1px,
       transparent 1px,
-      transparent 78px
-    );
+      transparent 78px);
   pointer-events: none;
 }
 
@@ -934,6 +933,7 @@ ul {
 }
 
 @media (max-width: 1080px) {
+
   .stats-grid,
   .benefit-grid,
   .subjects-grid,
@@ -1029,8 +1029,10 @@ ul {
   }
 
   .whatsapp-float {
-    right: 0.8rem;
-    bottom: 0.8rem;
-    padding: 0.85rem 1rem;
+    z-index: 999;
   }
-}
+
+  .navbar {
+    z-index: 1000;
+    /* make navbar above whatsapp button */
+  }
